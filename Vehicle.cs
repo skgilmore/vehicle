@@ -3,10 +3,18 @@ using System.Collections.Generic;
 
 namespace Garage
 {
+
+
     public class Vehicle
     {
+        // public double BatteryKWh { get; set; }
+        // public void ChargeBattery(double BatteryKWh)
+
+
         public string MainColor { get; set; }
         public string MaximumOccupancy { get; set; }
+        public string Name { get; set; }
+        public List<IGasVehicle> gasVehicles => throw new NotImplementedException();
 
         public virtual void Turn()
         {
@@ -22,10 +30,7 @@ namespace Garage
             Console.WriteLine("------------------------");
 
         }
-        public virtual void RefuelOrCharge()
-        {
-            // method definition omitted
-        }
+
 
     }
 }

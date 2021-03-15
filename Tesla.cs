@@ -3,9 +3,19 @@ using System.Collections.Generic;
 
 namespace Garage
 {
-    public class Tesla : Vehicle
+    public class Tesla : Vehicle, IElectric
     {
+        public double CurrentChargePercentage { get; set; }
         public double BatteryKWh { get; set; }
+
+
+        void ChargeBattery()
+        {
+            // ChargeBattery();
+            CurrentChargePercentage = 100.00;
+            Console.WriteLine("Charging");
+        }
+
 
         public override void Drive()
         {
